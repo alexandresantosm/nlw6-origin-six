@@ -35,6 +35,10 @@ a {
 }
 
 /*= = = BASE = = = = = = = = */
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font: 400 1rem 'DM Sans', sans-serif;
   background: var(--body-color);
