@@ -18,3 +18,17 @@ function handleLinkMenuClick() {
 for (const linkMenuElement of linkMenuElements) {
   linkMenuElement.addEventListener('click', handleLinkMenuClick)
 }
+
+const headerElement = document.querySelector('#header')
+const navHeight = headerElement.offsetHeight
+
+function addShadowInHeader() {
+  if (window.scrollY >= navHeight) {
+    console.log(navHeight)
+    headerElement.classList.add('scroll')
+  } else {
+    headerElement.classList.remove('scroll')
+  }
+}
+
+window.addEventListener('scroll', addShadowInHeader)
